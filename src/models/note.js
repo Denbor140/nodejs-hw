@@ -3,6 +3,12 @@ import { TAGS } from '../constants/tags.js';
 
 const noteSchema = new Schema(
   {
+    userId: {
+      type: Schema.Types.ObjectId,
+      require: true,
+      ref: 'User',
+    },
+
     title: {
       type: String,
       required: true,

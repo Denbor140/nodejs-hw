@@ -8,7 +8,7 @@ export const authenticate = async (req, res, next) => {
   }
 
   const session = await Session.findOne({
-    accesToken: req.cookies.accessToken,
+    accessToken: req.cookies.accessToken,
   });
 
   if (!session) {

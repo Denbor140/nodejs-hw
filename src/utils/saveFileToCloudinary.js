@@ -13,6 +13,8 @@ export const saveFileToCloudinary = async (buffer) => {
       {
         folder: 'notes-api/avatars',
         resource_type: 'image',
+        overwrite: true,
+        unique_filename: false,
       },
       (error, result) => {
         if (error) {
